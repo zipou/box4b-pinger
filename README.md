@@ -1,4 +1,4 @@
-# box4b-ping
+# box4b-pinger
 
 ## Purpose
 
