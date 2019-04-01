@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Routeur Principal",
+    "type": "ping",
+    "host": "192.168.1.254"
+  },
+  {
+    "name": "NAS",
+    "type": "ping",
+    "host": "192.168.1.250"
+  },
+  {
+    "name": "Macbook",
+    "type": "ping",
+    "host": "192.168.1.114"
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "name": "pinger-api",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.2"
+  },
+  "scripts": {
+    "start": "babel-node index.js"
+  },
+  "dependencies": {
+    "cron": "^1.7.0",
+    "express": "^4.16.4",
+    "nedb": "^1.8.0",
+    "nedb-promise": "^2.0.1"
+  }
+}
