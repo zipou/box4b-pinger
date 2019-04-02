@@ -8,7 +8,7 @@ const URL_ROOT  = "/"
 
 app.get(URL_ROOT, (req, res) => {
 
-  let body = `<div className="container" style='display:flex; flex-direction: row; justifiy-content:center; align-items: center; '>`
+  let body = `<div className="container" style='display:flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-wrap: wrap; '>`
   return getLastCheck()
   .then(lastCheck => {
     return findAll()
@@ -16,7 +16,7 @@ app.get(URL_ROOT, (req, res) => {
       targetList.map(target => {
         const {name, host, alive} = target
         body = `${body}
-        <div style="display:flex; flex-direction: row; padding: 10px; justify-content:flex-start; align-items: center; width: 250px; flex-wrap: wrap;">
+        <div style="display:flex; flex-direction: row; padding: 10px; justify-content:flex-start; align-items: center; min-width: 400px; flex-wrap: wrap;">
           <div style='width: 30px; height:30px; border-radius:50%; background-color:${(alive) ? "#5cb85c": "#b30c0c"}'></div>
           <div style="padding-left: 10px;">${name} ${(alive) ? "" : "DOWN :("}</div>
         </div>`
