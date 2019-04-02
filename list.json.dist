@@ -13,5 +13,11 @@
     "name": "Macbook",
     "type": "ping",
     "host": "192.168.1.114"
+  },
+  {
+    "name": "Socket Google",
+    "type": "socket",
+    "host": "216.58.204.131",
+    "port": 80
   }
 ]

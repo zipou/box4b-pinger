@@ -4,6 +4,19 @@ export const db = new Datastore({
   inMemoryOnly: true,
 });
 
+export let params = {
+  lastCheck: new Date(),
+}
+
+export const updateLastCheck = () => {
+  params["lastCheck"] = new Date();
+  return Promise.resolve(true)
+}
+
+export const getLastCheck = () => {
+  return Promise.resolve(params["lastCheck"]);
+}
+
 export const loadList = (targetList) => {
   return db.insert(targetList)
 }
