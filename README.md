@@ -6,6 +6,10 @@ Small app to check network status by pinging a list of host from a json file and
 
 ## Usage
 
-You must have *node* and *yarn* installed on the host.
+You must have **node** and **yarn** installed on the host.
 
-To start the app just copy `list.json.dist` into `list.json`, enter your target list and run `make`
+You must set the JSON file with the list of host to check. There's an example with the file list.json.dist.
+
+For now there's two types of check **ping** and **socket**
+
+After you filled the list, start the app with just `make` which is an alias of `yarn && yarn run start`
