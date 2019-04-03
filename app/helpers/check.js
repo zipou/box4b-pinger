@@ -44,4 +44,11 @@ export const startCheck = () => {
       })
     }))
   })
+  .then(() => {
+    return
+  })
+  .catch((error) => {
+    console.log(error.message)
+    return
+  })
 }
