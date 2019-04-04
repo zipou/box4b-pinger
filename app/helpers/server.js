@@ -1,6 +1,7 @@
 import http from "http"
 import express from "express"
 import { findAll, getLastCheck } from "./datastore";
+import { startCheck } from "./check";
 
 const app = express();
 
@@ -10,7 +11,10 @@ app.use(express.static(STATIC_PATH))
 app.get(URL_ROOT, (req, res) => {
 
   let body = `<div class="container">`
-  return getLastCheck()
+  return startCheck()
+  .then(() => {
+    return getLastCheck()
+  })
   .then(lastCheck => {
     return findAll()
     .then(targetList => {

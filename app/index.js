@@ -9,12 +9,12 @@ import {startCheck} from './helpers/check'
 export default () => {
   //Loading List into database
   return loadList(list)
-  .then(() => {
-      return startCheck()
-  })
-  .then(() => {
-      return launchBatch()
-  })
+  // .then(() => {
+  //     return startCheck()
+  // })
+  // // .then(() => {
+  // //     return launchBatch()
+  // // })
   .then(() => {
     return launchServer()
   })
