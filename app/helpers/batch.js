@@ -2,11 +2,12 @@ import {registerJob, CRON_EVERY_DAY_PATTERN, CRON_EVERY_MINUTE_PATTERN} from '..
 import {startCheck} from './check'
 
 export const launchBatch = () => {
-  return registerJob({
+  registerJob({
     name: "Pinger Batch",
     pattern: CRON_EVERY_MINUTE_PATTERN,
     func: () => {
       return startCheck()
     }
   })
+  return Promise.resolve(true)
 }

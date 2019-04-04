@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Google Website",
+    "type": "ping",
+    "host": "216.58.204.131"
+  },
+  {
+    "name": "Website Down",
+    "type": "ping",
+    "host": "10.10.10.10"
+  },
+  {
+    "name": "Socket Google",
+    "type": "socket",
+    "host": "216.58.204.131",
+    "port": 80
+  },
+  {
+    "name": "Socket Down",
+    "type": "socket",
+    "host": "10.10.10.10",
+    "port": 80
+  }
+]

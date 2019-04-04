@@ -1,5 +1,5 @@
 export const debug = (message) => {
-  // console.log(message)
+  console.log(message)
 }
 export const info = (message) => {
   console.log(message)
