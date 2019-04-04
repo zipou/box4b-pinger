@@ -12,10 +12,11 @@ app.get(URL_ROOT, (req, res) => {
 
   let body = `<div class="container">`
   return startCheck()
+  // .then(() => {
+  //   return getLastCheck()
+  // })
   .then(() => {
-    return getLastCheck()
-  })
-  .then(lastCheck => {
+    const lastCheck = new Date()
     return findAll()
     .then(targetList => {
       targetList.map(target => {
