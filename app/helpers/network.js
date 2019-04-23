@@ -2,9 +2,26 @@ import {Socket} from "net"
 import { runCommand } from "../libs/System";
 
 export const ping = ({host, timeout = 0.5, pingCount = 3}) => {
-  const command = `ping -i 0.1 -t 1 -c ${pingCount} -W ${timeout} ${host}`
-  // console.log(command)
-  return runCommand(command)
+  return new Promise((resolve, reject) => {
+    let result = false
+    const command = `ping -i 0.1 -t 1 -c ${pingCount} -W ${timeout} ${host}`
+    // console.log(command)
+    runCommand(command)
+    .then(() => {
+      result = true
+      // console.log(`Ping OK ${host}`)
+      resolve(true)
+    })
+    .catch(() => {
+      reject(true)
+    })
+    setTimeout(() => {
+      if (!result) {
+        // console.log(`Timeout exceeded ${host}`)
+        reject("Timeout exceeded")
+      }
+    }, 500)
+  })
 }
 
 
