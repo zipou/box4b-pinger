@@ -13,6 +13,7 @@
   },
   "scripts": {
     "dev": "NODE_ENV=dev babel-node index.js",
+    "stage": "babel-node index.js",
     "start": "NODE_ENV=prod pm2 start --interpreter babel-node index.js",
     "test": "jest",
     "pm2": "pm2"
