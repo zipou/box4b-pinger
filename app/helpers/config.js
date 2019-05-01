@@ -1,7 +1,8 @@
 import fetch from "node-fetch"
 
 export const fetchConfig = () => {
-  const URL = `http://${getApiRoot()}/hosting/probe/19706e15-6a1b-11e9-be80-0242ac120002/get`
+  const TOKEN = process.env.PROBE_TOKEN
+  const URL = `http://${getApiRoot()}/hosting/probe/${TOKEN}/get`
   return fetch(URL)
   .then(response => response.json())
 }
