@@ -14,9 +14,9 @@ export default () => {
     const optionsParsed = options && JSON.parse(options)
     //Loading List into database
     return loadList(optionsParsed)
-    .then(() => {
-      return startLatencyCheck(probe)
-    })
+    // .then(() => {
+    //   return startLatencyCheck(probe)
+    // })
   })
   .then(() => {
     return launchServer()
