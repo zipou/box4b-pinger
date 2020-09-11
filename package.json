@@ -24,7 +24,7 @@
     "express": "^4.16.4",
     "nedb": "^1.8.0",
     "nedb-promise": "^2.0.1",
-    "node-fetch": "^2.5.0",
+    "node-fetch": "^2.6.1",
     "pm2": "^3.4.1",
     "websocket": "^1.0.28"
   }
