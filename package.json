@@ -21,7 +21,7 @@
   "dependencies": {
     "cron": "^1.7.0",
     "env": "^0.0.2",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "nedb": "^1.8.0",
     "nedb-promise": "^2.0.1",
     "node-fetch": "^2.5.0",
